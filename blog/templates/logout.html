@@ -1,0 +1,17 @@
+{% if user.is_authenticated %}
+
+Logged In as {{ user.username }}
+
+
+<form action="" method="post">
+{% csrf_token %}
+        
+<button type="submit">Logout</button>
+</form>
+{% else %}
+
+    
+{% endif %}
+{% block content %}
+    
+    {% endblock %}
